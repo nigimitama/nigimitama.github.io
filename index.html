@@ -1,49 +1,99 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mitama's page</title>
 
-<div class="posts">
-  {% for post in paginator.posts %}
-    <article class="post">
-      <a href="{{ site.baseurl }}{{ post.url }}">
-        <h1>{{ post.title }}</h1>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
-        <div>
-          <p class="post_date">{{ post.date | date: "%B %e, %Y" }}</p>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+
+  <style type="text/css">
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Eighth navbar example">
+      <div class="container">
+        <a class="navbar-brand" href="/">Masayoshi Mita</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+  
+        <div class="collapse navbar-collapse" id="navbarsExample07">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="lectures/2023-data-science.html">Lectures</a>
+            </li>
+          </ul>
         </div>
-      </a>
-      <div class="entry">
-        {{ post.excerpt }}
+      </div>
+    </nav>
+  </header>
+  <main class="container">
+    <article class="my-4">
+      <section class="my-4 py-4 row justify-content-start">
+        <div class="col-lg-2 row justify-content-center">
+          <img src="images/me.jpg" style="width: 100%; max-width: 200px;">
+        </div>
+        <div class="col">
+          <p class="lead">三田匡能<br>Masayoshi Mita</p>
+          <p>データ分析、Web APIやWebアプリの研究・開発・保守運用などを通じてビジネスを効率化するような仕事に従事しています。</p>
+        </div>
       </div>
 
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+      <section class="my-4">
+        <div>
+          <h6>職務実績</h6>
+          <ul>
+            <li>
+              価格予測・家賃予測を行うAIとAPIの研究・開発および保守運用
+              <ul><li><a href="https://aisc.ga-tech.co.jp/research/data-science/home-value-estimate">価格査定AI  | AI Strategy Center</a></li></ul>
+            </li>
+            <li>Treasure Dataによるデータ集計基盤の構築およびTableauによるダッシュボード開発</li>
+            <li>営業活動の効率化のための社内向けWebアプリの開発</li>
+          </ul>
+        </div>
+
+        <div class="my-4">
+          <h6>研究</h6>
+          <ul>
+            <li>福中公輔, 橋本武彦, 橋本明広, 栗田一生, & 三田匡能. (2020). 情報の非対称性の解消に向けた中古マンション価格推定の取り組み. デジタルプラクティス, 11(3), 475-488.</li>
+            <li>三田匡能. (2020). C3-1 高価格物件を考慮した中古マンションの売買価格予測―ドメイン知識に基づいたルールベースと機械学習の融合による小サンプルデータの学習―. In 日本行動計量学会大会抄録集 48 (pp. 104-107). 日本行動計量学会.</li>
+          </ul>
+        </div>
+
+        <div class="my-4">
+          <h6>教育</h6>
+          <ul>
+            <li>2023年度 立教大学 <a href="lectures/2023-data-science.html">「データサイエンス概論」</a></li>
+            <li>2022年度 電気通信大学 データアントレプレナー フェロープログラム <a href="https://de.uec.ac.jp/2022/06/16/10422/">「回帰モデル作成」</a></li>
+            <li>2021年度 電気通信大学 データアントレプレナー フェロープログラム <a href="https://de.uec.ac.jp/2021/06/18/9054/">「回帰モデル作成」</a></li>
+            <li>2020年度 電気通信大学 データアントレプレナー フェロープログラム
+              <a href="https://de.uec.ac.jp/2020/07/11/7258/">「ケース研究 不動産」</a>
+              <a href="https://de.uec.ac.jp/2020/07/11/7237/">「データサイエンス100本ノック」</a>
+            </li>
+          </ul>
+        </div>
+
+      </section>
     </article>
-  {% endfor %}
-
-  <!-- pagination -->
-  {% if paginator.total_pages > 1 %}
-  <div class="pagination">
-    {% if paginator.previous_page %}
-      <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
-    {% else %}
-      <span>&laquo; Prev</span>
-    {% endif %}
-
-    {% for page in (1..paginator.total_pages) %}
-      {% if page == paginator.page %}
-        <span class="webjeda">{{ page }}</span>
-      {% elsif page == 1 %}
-        <a href="{{ '/' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
-      {% else %}
-        <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
-      {% endif %}
-    {% endfor %}
-
-    {% if paginator.next_page %}
-      <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
-    {% else %}
-      <span>Next &raquo;</span>
-    {% endif %}
-  </div>
-  {% endif %}
-</div>
+  </main>
+</body>
+</html>
