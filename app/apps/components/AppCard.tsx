@@ -20,7 +20,6 @@ const colorClasses = {
 export const AppCard = ({ app }: { app: AppInfo }) => {
   const isChrome = app?.siteUrl && app?.siteUrl.includes("chrome")
   const siteBtn = {
-    color: isChrome ? "amber" : "lime",
     btnClass: isChrome ? colorClasses.amber : colorClasses.lime,
     icon: isChrome ? <FaChrome /> : <FaHome />,
     text: isChrome ? "WebStore" : "Website",
@@ -39,7 +38,7 @@ export const AppCard = ({ app }: { app: AppInfo }) => {
       </CardContent>
       <CardFooter className="flex-wrap gap-2">
         {app.siteUrl && (
-          <Button size="sm" variant="outline" className={clsx(colorClasses[siteBtn.color])} asChild>
+          <Button size="sm" variant="outline" className={clsx(siteBtn.btnClass)} asChild>
             <Link href={app.siteUrl} className="flex items-center gap-2">
               {siteBtn.icon}
               {siteBtn.text}
