@@ -1,10 +1,28 @@
 import Title from "../components/Title"
+import { ArticleLink, ArticleLinkProps } from "./components/ArticleLink"
 
 export const metadata = {
   title: "Articles - Masayoshi Mita",
 }
 
 export default function ArticlesPage() {
+  const articles: ArticleLinkProps[] = [
+    {
+      date: "2025-06",
+      href: "https://note.com/fine_coot1374/n/n250cbf6e93c8",
+      title: "【学会参加レポート】JSAI2025に参加しました！",
+      category: "会社のブログ",
+      tags: ["学会"],
+    },
+    {
+      date: "2025-06",
+      href: "https://xtech.nikkei.com/atcl/nxt/column/18/03210/052800001/",
+      title: "GA technologiesがAIで不動産の調達業務を効率化、賃料査定ツールを開発した経緯 | 日経クロステック（xTECH）",
+      category: "Web記事",
+      tags: ["データサイエンス"],
+    },
+  ]
+
   return (
     <>
       <Title title="Articles" subtitle="ブログ記事など" />
@@ -15,25 +33,18 @@ export default function ArticlesPage() {
           </section>
 
           <section className="my-8">
+            {articles.map((article, index) => (
+              <ArticleLink
+                key={index}
+                date={article.date}
+                href={article.href}
+                title={article.title}
+                category={article.category}
+                tags={article.tags}
+              />
+            ))}
+
             <ul className="list-disc pl-6 space-y-4">
-              <li>
-                2025-06
-                <span className="bg-gray-500 text-white px-2 py-1 rounded text-xs mx-2">会社Blog</span>
-                <a href="https://note.com/fine_coot1374/n/n250cbf6e93c8" className="text-blue-600 hover:underline">
-                  【学会参加レポート】JSAI2025に参加しました！
-                </a>
-              </li>
-              <li>
-                2025-06
-                <span className="bg-gray-500 text-white px-2 py-1 rounded text-xs mx-2">Web記事</span>
-                <a
-                  href="https://xtech.nikkei.com/atcl/nxt/column/18/03210/052800001/"
-                  className="text-blue-600 hover:underline"
-                >
-                  GA technologiesがAIで不動産の調達業務を効率化、賃料査定ツールを開発した経緯 |
-                  日経クロステック（xTECH）
-                </a>
-              </li>
               <li>
                 2024-11
                 <span className="bg-gray-500 text-white px-2 py-1 rounded text-xs mx-2">会社Blog</span>
