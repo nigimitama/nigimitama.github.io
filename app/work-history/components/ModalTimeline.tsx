@@ -48,11 +48,13 @@ export default function ModalTimeline({ items, className = "" }: TimelineProps) 
                 {item.title}
               </DialogTrigger>
 
-              <DialogContent className="bg-white w-2xl">
-                <DialogHeader>
+              <DialogContent className="bg-white max-w-4xl max-h-[80vh] flex flex-col">
+                <DialogHeader className="flex-shrink-0">
                   <DialogTitle>{item.title}</DialogTitle>
                   <time className="mb-1 text-sm font-normal leading-none text-gray-400">{item.date}</time>
+                </DialogHeader>
 
+                <div className="flex-1 overflow-y-auto pr-2">
                   <div className="text-md">
                     {/* Markdown Description */}
                     {item.markdown && (
@@ -78,7 +80,7 @@ export default function ModalTimeline({ items, className = "" }: TimelineProps) 
                       </div>
                     )}
                   </div>
-                </DialogHeader>
+                </div>
               </DialogContent>
             </Dialog>
           </li>
