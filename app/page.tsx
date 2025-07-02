@@ -32,13 +32,13 @@ export default function Home() {
           </div>
 
           <div className="flex justify-center gap-4 mb-12">
-            <Button size="lg" className="bg-blue-600 hover:bg-blue-500">
+            <Button size="lg" className="bg-blue-600 hover:bg-blue-500" asChild>
               <Link href="https://www.linkedin.com/in/masayoshi-mita/" className="flex items-center gap-2 text-white">
                 <FaLinkedin />
                 LinkedIn
               </Link>
             </Button>
-            <Button size="lg" variant="outline" className="border-gray-300 hover:bg-gray-50">
+            <Button size="lg" variant="outline" className="border-gray-300 hover:bg-gray-50" asChild>
               <Link href="https://github.com/nigimitama" className="flex items-center gap-2 text-gray-700">
                 <FaGithub />
                 GitHub
