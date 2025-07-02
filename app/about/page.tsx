@@ -28,7 +28,7 @@ export default function AboutPage() {
                   機械学習を用いた予測モデルの構築、統計学・計量経済学を利用した効果検証、テスト理論を応用したスコアリング、Webアプリケーション開発などを行っています。
                 </p>
 
-                <p className="text-gray-700 leading-relaxed">
+                <p className="text-gray-700 leading-relaxed mb-6">
                   企画・要件定義から開発（インフラ・バックエンド・フロントエンド）・運用まで1人で担当しています。
                 </p>
               </div>
@@ -36,7 +36,12 @@ export default function AboutPage() {
           </section>
 
           <section className="my-10">
-            <h2 className="text-2xl font-bold text-gray-800 mb-4">経歴</h2>
+            <h2 className="text-xl font-semibold text-gray-800 mb-2">スキル・興味分野</h2>
+            <SkillTags />
+          </section>
+
+          <section className="my-10">
+            <h2 className="text-xl font-bold text-gray-800 mb-2">経歴</h2>
             <History />
           </section>
         </article>
@@ -46,6 +51,7 @@ export default function AboutPage() {
 }
 
 import Timeline, { TimelineItem } from "@/components/Timeline"
+import Tags from "@/components/Tags"
 
 const History = () => {
   const timelineData: TimelineItem[] = [
@@ -98,4 +104,25 @@ const History = () => {
   ]
 
   return <Timeline items={timelineData} />
+}
+
+const SkillTags = () => {
+  const skills = [
+    "機械学習",
+    "統計学",
+    "計量経済学",
+    "統計的因果推論",
+    "テスト理論・スコアリング",
+    "R",
+    "Python",
+    "SQL",
+    "Webアプリ開発",
+    "TypeScript",
+    "Next.js",
+    "Ruby on Rails",
+    "AWS",
+    "Serverless Architecture",
+  ]
+
+  return <Tags tags={skills} />
 }
