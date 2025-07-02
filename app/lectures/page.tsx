@@ -1,120 +1,80 @@
-import Navigation from "../components/Navigation";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import Link from "@/components/Link"
+import { FaExternalLinkAlt } from "react-icons/fa"
 
 export const metadata = {
-  title: "2023年度 立教大学 「データサイエンス概論」 - Masayoshi Mita",
-};
+  title: "講義等 - Masayoshi Mita",
+}
 
-export default function Lectures() {
+export default function LecturesPage() {
+  const data = [
+    {
+      title: "放送大学「多変量データ分析実践の基礎」登壇",
+      year: "2023年 ~ ",
+      href: "https://bangumi.ouj.ac.jp/v4/bslife/detail/01AC2011.html",
+      desc: "回帰分析の社会実装に関するパートで登壇",
+    },
+    {
+      title: "2023年度 立教大学 「データサイエンス概論」",
+      year: "2023年度",
+      href: "/lectures/2023-data-science",
+      desc: "計量経済学と機械学習の演習",
+    },
+    {
+      title: "電気通信大学 データアントレプレナー フェロープログラム 「回帰モデル作成」",
+      year: "2022年度",
+      href: "https://de.uec.ac.jp/2022/06/16/10422/",
+      desc: "Pythonによる賃料予測モデルの作成演習",
+    },
+    {
+      title: "電気通信大学 データアントレプレナー フェロープログラム 「回帰モデル作成」",
+      year: "2021年度",
+      href: "https://de.uec.ac.jp/2021/06/18/9054/",
+      desc: "Pythonによる賃料予測モデルの作成演習",
+    },
+    {
+      title:
+        "電気通信大学 データアントレプレナー フェロープログラム 「ケース研究 不動産」「データサイエンス100本ノック」",
+      year: "2020年度",
+      href: "https://de.uec.ac.jp/2020/07/11/7258/",
+      desc: "不動産業界におけるデータ活用の紹介とPythonの演習による実践的な講義",
+    },
+  ]
+
   return (
     <>
-      <Navigation />
       <main className="container mx-auto px-4">
         <article className="my-8">
           <section className="my-8">
-            <h1 className="text-2xl font-bold mb-6">2023年度 立教大学 「データサイエンス概論」</h1>
+            <h1 className="text-2xl font-bold mb-6">講義</h1>
           </section>
 
           <section className="my-8">
-            <p className="mb-6">
-              教材として、安藤道人・三田匡能「
-              <a href="https://michihito-ando.github.io/econome_ml_with_R/" className="text-blue-600 hover:underline">
-                Rで学ぶ計量経済学と機械学習
-              </a>
-              」（ウェブ資料）を用いる。
-            </p>
-
-            <ol className="list-decimal pl-6 space-y-2">
-              <li>
-                <a href="https://michihito-ando.github.io/econome_ml_with_R/01_elements.html" className="text-blue-600 hover:underline">
-                  Rの基礎
-                </a>
-              </li>
-              <li>
-                <a href="https://michihito-ando.github.io/econome_ml_with_R/02_data_wrangling.html" className="text-blue-600 hover:underline">
-                  データ整理
-                </a>
-                <ul className="list-disc pl-6 mt-2">
-                  <li>
-                    <a href="https://michihito-ando.github.io/econome_ml_with_R/test_scores.xlsx" className="text-blue-600 hover:underline">
-                      test_scores.xlsx
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="https://michihito-ando.github.io/econome_ml_with_R/03_EDA.html" className="text-blue-600 hover:underline">
-                  データの可視化
-                </a>
-              </li>
-              <li>
-                <a href="https://michihito-ando.github.io/econome_ml_with_R/04_OLS.html" className="text-blue-600 hover:underline">
-                  回帰分析
-                </a>
-              </li>
-              <li>
-                <a href="https://michihito-ando.github.io/econome_ml_with_R/05_OLS_Matching.html" className="text-blue-600 hover:underline">
-                  計量経済学１：回帰分析とマッチング
-                </a>
-              </li>
-              <li>
-                <a href="https://michihito-ando.github.io/econome_ml_with_R/06_IV.html" className="text-blue-600 hover:underline">
-                  計量経済学２：操作変数法
-                </a>
-              </li>
-              <li>
-                <a href="https://michihito-ando.github.io/econome_ml_with_R/07_RDD.html" className="text-blue-600 hover:underline">
-                  計量経済学３：回帰不連続デザイン（+モンテカルロ・シミュレーション入門）
-                </a>
-              </li>
-              <li>
-                <a href="https://michihito-ando.github.io/econome_ml_with_R/08_Fixed_Effects.html" className="text-blue-600 hover:underline">
-                  計量経済学４：固定効果モデル
-                </a>
-              </li>
-              <li>
-                <a href="https://michihito-ando.github.io/econome_ml_with_R/09_DID.html" className="text-blue-600 hover:underline">
-                  計量経済学５：差の差(DID)法
-                </a>
-              </li>
-              <li>
-                <a href="https://michihito-ando.github.io/econome_ml_with_R/10_OLS_logistic.html" className="text-blue-600 hover:underline">
-                  機械学習１：線形回帰・ロジスティック回帰
-                </a>
-              </li>
-              <li>
-                <a href="https://michihito-ando.github.io/econome_ml_with_R/11_Ridge_Lasso.html" className="text-blue-600 hover:underline">
-                  機械学習２：リッジ回帰・Lasso
-                </a>
-              </li>
-              <li>
-                <a href="https://michihito-ando.github.io/econome_ml_with_R/12_Tree.html" className="text-blue-600 hover:underline">
-                  機械学習３：決定木・アンサンブル学習
-                </a>
-              </li>
-              <li>
-                <a href="https://michihito-ando.github.io/econome_ml_with_R/13_NeuralNetwork.html" className="text-blue-600 hover:underline">
-                  機械学習４：ニューラルネットワーク・ディープラーニング・大規模言語モデル
-                </a>
-              </li>
-              <li>
-                Appendix
-                <ul className="list-disc pl-6 mt-2 space-y-1">
-                  <li>
-                    <a href="https://michihito-ando.github.io/econome_ml_with_R/14_ChatGPT_API.html" className="text-blue-600 hover:underline">
-                      Web API / ChatGPTをRから使う
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://michihito-ando.github.io/econome_ml_with_R/14_Rmarkdown.html" className="text-blue-600 hover:underline">
-                      R Markdown
-                    </a>
-                  </li>
-                </ul>
-              </li>
-            </ol>
+            {data.map((item, index) => {
+              const isExternal = item.href.startsWith("http")
+              const icon = isExternal ? <FaExternalLinkAlt /> : null
+              return (
+                <Link href={item.href} className="text-lg" key={index}>
+                  <Card key={index} className="mb-4 border-gray-200 shadow-sm hover:shadow-lg transition-shadow">
+                    <CardHeader>
+                      <CardTitle>
+                        <div style={{ display: "inline-flex", alignItems: "center", gap: "4px" }}>
+                          {icon}
+                          <span>{item.title}</span>
+                        </div>
+                      </CardTitle>
+                      <p className="text-sm text-gray-500 mt-2">{item.year}</p>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-sm text-gray-700">{item.desc}</p>
+                    </CardContent>
+                  </Card>
+                </Link>
+              )
+            })}
           </section>
         </article>
       </main>
     </>
-  );
+  )
 }

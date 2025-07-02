@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import { Noto_Sans_JP } from "next/font/google"
 import "./globals.css"
 import GoogleAnalytics from "./components/GoogleAnalytics"
+import Header from "@/components/Header"
 
 const notoSansJP = Noto_Sans_JP({
   variable: "--font-noto-sans-jp",
@@ -30,6 +31,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${notoSansJP.variable} leading-5 font-sans antialiased text-gray-900`}>
         <GoogleAnalytics />
+        <Header />
         {children}
       </body>
     </html>
