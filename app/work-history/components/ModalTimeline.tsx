@@ -28,7 +28,7 @@ const colorClasses = {
   gray: "bg-gray-200",
 }
 
-export default function Timeline({ items, className = "" }: TimelineProps) {
+export default function ModalTimeline({ items, className = "" }: TimelineProps) {
   return (
     <ol className={`relative border-s border-gray-200 ${className}`}>
       {items.map((item, index) => {
@@ -56,14 +56,14 @@ export default function Timeline({ items, className = "" }: TimelineProps) {
 
             {/* Markdown Description */}
             {item.markdown && (
-              <div className="text-gray-700">
+              <div className="text-gray-500">
                 <Markdown
                   components={{
                     h1: ({ node, ...props }) => <h1 className="text-lg font-bold my-2" {...props} />,
                     h2: ({ node, ...props }) => <h2 className="font-bold my-2" {...props} />,
                     h3: ({ node, ...props }) => <h3 className="font-bold my-2" {...props} />,
-                    ol: ({ node, ...props }) => <ol className="px-6 list-decimal" {...props} />,
-                    ul: ({ node, ...props }) => <ul className="px-6 list-disc" {...props} />,
+                    ol: ({ node, ...props }) => <ol className="px-6 list-decimal mb-6" {...props} />,
+                    ul: ({ node, ...props }) => <ul className="px-6 list-disc mb-6" {...props} />,
                     p: ({ node, ...props }) => <p className="mb-6" {...props} />,
                     a: ({ node, ...props }) => (
                       <a className="text-blue-500 hover:underline" target="_blank" {...props} />
@@ -76,7 +76,7 @@ export default function Timeline({ items, className = "" }: TimelineProps) {
             )}
 
             {/* Custom content */}
-            {item.content && <div className={`text-gray-700 ${item.link ? "mb-4" : ""}`}>{item.content}</div>}
+            {item.content && <div className={`text-gray-500 ${item.link ? "mb-4" : ""}`}>{item.content}</div>}
 
             {/* Link */}
             {item.link && (
@@ -108,5 +108,3 @@ export default function Timeline({ items, className = "" }: TimelineProps) {
     </ol>
   )
 }
-
-export { Timeline }
