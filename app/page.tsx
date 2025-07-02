@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 export default function Home() {
   return (
     <main className="container mx-auto px-4">
-      <div className="min-h-screen flex items-center justify-center">
+      <div className="min-h-screen flex items-center justify-center my-4">
         <div className="text-center max-w-3xl">
           <div className="mb-8">
             <img
