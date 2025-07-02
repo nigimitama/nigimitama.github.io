@@ -56,6 +56,7 @@ import Tags from "@/components/Tags"
 const History = () => {
   const timelineData: TimelineItem[] = [
     {
+      color: "blue",
       date: "2019-03",
       title: "大学卒業",
       content: (
@@ -71,9 +72,9 @@ const History = () => {
           </p>
         </div>
       ),
-      color: "blue",
     },
     {
+      color: "blue",
       date: "2019-04",
       title: "株式会社GA technologies 入社",
       content: (
@@ -84,22 +85,30 @@ const History = () => {
             入社前は分析のみを行う想定だったが、研究結果を実装することも求められて開発業務も行うことに。
           </p>
 
-          <p className="mb-2"></p>
+          <p className="mb-2">2021年頃からはチーフに昇格し、メンバーの育成やプロジェクトのリードも担うようになる。</p>
 
           <p className="mb-2"></p>
         </div>
       ),
-      color: "blue",
       link: {
         href: "/work-history",
         text: "職務経歴",
       },
     },
     {
-      date: "2021-10",
-      title: "チーフに昇格",
-      description: "メンバーの育成や複数人プロジェクトのリードも担当するようになる",
       color: "blue",
+      date: "2023-04 ~ 2024-03",
+      title: "立教大学 非常勤講師（副業）",
+      content: (
+        <div className="text-gray-500">
+          <p className="mb-2">学生時代の恩師の研究休暇中にデータサイエンスの講義の代役を務めた。</p>
+          <p className="mb-2">※他にも電気通信大学・放送大学などで短期的に講義に関わることもあった。</p>
+        </div>
+      ),
+      link: {
+        href: "/lectures",
+        text: "講義",
+      },
     },
   ]
 
