@@ -43,7 +43,7 @@ export default function Header() {
                 </Link>
               </li>
               <li>
-                <Link href="/experience" className="block py-2 md:py-0 hover:text-gray-300 transition-colors">
+                <Link href="/work-history" className="block py-2 md:py-0 hover:text-gray-300 transition-colors">
                   Experience
                 </Link>
               </li>

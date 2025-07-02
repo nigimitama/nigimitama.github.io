@@ -91,8 +91,8 @@ const History = () => {
       ),
       color: "blue",
       link: {
-        href: "/experience",
-        text: "職務実績",
+        href: "/work-history",
+        text: "職務経歴",
       },
     },
     {

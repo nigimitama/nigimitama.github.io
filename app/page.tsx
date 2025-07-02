@@ -55,11 +55,11 @@ export default function Home() {
               <div className="text-gray-600">プロフィール</div>
             </Link>
             <Link
-              href="/experience"
+              href="/work-history"
               className="p-4 rounded-lg border border-gray-200 hover:border-gray-300 hover:shadow-sm transition-all"
             >
-              <div className="font-semibold text-gray-900">Experience</div>
-              <div className="text-gray-600">職務実績</div>
+              <div className="font-semibold text-gray-900">Work History</div>
+              <div className="text-gray-600">職務経歴</div>
             </Link>
             <Link
               href="/publications"

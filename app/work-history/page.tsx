@@ -2,17 +2,17 @@ import Link from "@/components/Link"
 import Title from "../components/Title"
 
 export const metadata = {
-  title: "Experience - Masayoshi Mita",
+  title: "Work History - Masayoshi Mita",
 }
 
-export default function ExperiencePage() {
+export default function WorkHistoryPage() {
   return (
     <>
-      <Title title="Experience" subtitle="職務実績" />
+      <Title title="Work History" subtitle="職務経歴" />
       <main className="container mx-auto">
         <article className="my-8 px-4">
           <section className="my-8">
-            <h1 className="text-2xl font-bold mb-6">職務実績</h1>
+            <h1 className="text-2xl font-bold mb-6">職務経歴</h1>
           </section>
 
           <section className="my-8">
