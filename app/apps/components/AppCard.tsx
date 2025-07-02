@@ -2,6 +2,7 @@ import Link from "@/components/Link"
 import { Card, CardContent, CardFooter, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { FaChrome, FaGithub, FaHome } from "react-icons/fa"
+import clsx from "clsx"
 
 export type AppInfo = {
   name: string
@@ -11,12 +12,18 @@ export type AppInfo = {
   imageUrl?: string
 }
 
+const colorClasses = {
+  amber: "border-amber-500 text-amber-500 hover:bg-amber-100",
+  lime: "border-lime-500 text-lime-500 hover:bg-lime-100",
+}
+
 export const AppCard = ({ app }: { app: AppInfo }) => {
-  const isCrome = app?.siteUrl && app?.siteUrl.includes("chrome")
+  const isChrome = app?.siteUrl && app?.siteUrl.includes("chrome")
   const siteBtn = {
-    color: isCrome ? "amber" : "lime",
-    icon: isCrome ? <FaChrome /> : <FaHome />,
-    text: isCrome ? "WebStore" : "Website",
+    color: isChrome ? "amber" : "lime",
+    btnClass: isChrome ? colorClasses.amber : colorClasses.lime,
+    icon: isChrome ? <FaChrome /> : <FaHome />,
+    text: isChrome ? "WebStore" : "Website",
   }
 
   return (
@@ -32,12 +39,7 @@ export const AppCard = ({ app }: { app: AppInfo }) => {
       </CardContent>
       <CardFooter className="flex-wrap gap-2">
         {app.siteUrl && (
-          <Button
-            size="sm"
-            variant="outline"
-            className={`border-${siteBtn.color}-500 text-${siteBtn.color}-500 hover:bg-${siteBtn.color}-100`}
-            asChild
-          >
+          <Button size="sm" variant="outline" className={clsx(colorClasses[siteBtn.color])} asChild>
             <Link href={app.siteUrl} className="flex items-center gap-2">
               {siteBtn.icon}
               {siteBtn.text}
