@@ -16,8 +16,8 @@ export default function AboutPage() {
                 <img src="/me.jpg" alt="顔写真" width={200} height={200} className="rounded-lg object-cover" />
               </div>
               <div className="flex-grow">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="text-xl font-bold">三田匡能</span>
+                <div className="flex items-baseline gap-2 mb-4">
+                  <span className="text-2xl font-bold">三田匡能</span>
                   <span className="text-lg text-gray-500">Masayoshi Mita</span>
                 </div>
                 <div>
@@ -34,8 +34,68 @@ export default function AboutPage() {
               </div>
             </div>
           </section>
+
+          <section className="my-10">
+            <h2 className="text-2xl font-bold text-gray-800 mb-4">経歴</h2>
+            <History />
+          </section>
         </article>
       </main>
     </>
   )
+}
+
+import Timeline, { TimelineItem } from "@/components/Timeline"
+
+const History = () => {
+  const timelineData: TimelineItem[] = [
+    {
+      date: "2019-03",
+      title: "大学卒業",
+      content: (
+        <div className="text-gray-500">
+          <p className="mb-2">立教大学 経済学部 経済政策学科を卒業。</p>
+
+          <p className="mb-2">
+            大学時代はデータ分析に興味を持ち、独学で機械学習を勉強したり、大学院の計量経済学（統計的因果推論）の授業に参加させてもらって勉強していた。
+          </p>
+
+          <p className="mb-2">
+            卒業論文ではかつて過疎化対策のため行われていた交付金の効果を検証するためFuzzy RDデザインによる分析を行った。
+          </p>
+        </div>
+      ),
+      color: "blue",
+    },
+    {
+      date: "2019-04",
+      title: "株式会社GA technologies 入社",
+      content: (
+        <div className="text-gray-500">
+          <p className="mb-2">
+            研究開発組織 AI Strategy Centerにてデータサイエンティストとして入社。
+            <br />
+            入社前は分析のみを行う想定だったが、研究結果を実装することも求められて開発業務も行うことに。
+          </p>
+
+          <p className="mb-2"></p>
+
+          <p className="mb-2"></p>
+        </div>
+      ),
+      color: "blue",
+      link: {
+        href: "/experience",
+        text: "職務実績",
+      },
+    },
+    {
+      date: "2021-10",
+      title: "チーフに昇格",
+      description: "メンバーの育成や複数人プロジェクトのリードも担当するようになる",
+      color: "blue",
+    },
+  ]
+
+  return <Timeline items={timelineData} />
 }
