@@ -44,9 +44,9 @@ export default function ModalTimeline({ items, className = "" }: TimelineProps) 
             <time className="mb-1 text-sm font-normal leading-none text-gray-400">{item.date}</time>
 
             <Dialog>
-              <h3 className="text-lg font-semibold text-gray-700 mb-2">
-                <DialogTrigger>{item.title}</DialogTrigger>
-              </h3>
+              <DialogTrigger className="block text-lg font-semibold text-gray-700 mb-2 hover:text-gray-400 	hover:cursor-pointer">
+                {item.title}
+              </DialogTrigger>
 
               <DialogContent className="bg-white w-2xl">
                 <DialogHeader>
