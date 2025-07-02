@@ -29,6 +29,19 @@ export default function PublicationsPage() {
                   </li>
                 </ul>
               </li>
+
+              <li>
+                安藤道人 & 三田匡能
+                <Link href="https://michihito-ando.github.io/econome_ml_with_R/">「Rで学ぶ計量経済学と機械学習」</Link>
+                （Web資料）
+              </li>
+
+              <li>
+                <Link href="https://zenn.dev/nigimitama/books/aws-sam-introduction">
+                  「AWS SAMによるサーバレスアプリケーション開発入門」
+                </Link>
+                （Web資料 / Zenn Book）
+              </li>
             </ul>
           </section>
 
