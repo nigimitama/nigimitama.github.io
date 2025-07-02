@@ -47,9 +47,9 @@ const PersonalBlog = () => {
   ]
   return (
     <div className="grid grid-cols-3 gap-4">
-      {blogs.map((e) => {
+      {blogs.map((e, index) => {
         return (
-          <a href={e.href} target="_blank" rel="noopener noreferrer">
+          <a key={index} href={e.href} target="_blank" rel="noopener noreferrer">
             <Card className="hover:shadow-md hover:text-gray-400">
               <div className="flex items-center gap-2">
                 {e.icon ?? ""}
