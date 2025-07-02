@@ -222,8 +222,6 @@ Ruby on Rails, Python
       <main className="container mx-auto">
         <article className="my-8 px-4">
           <section className="my-8">
-            <h2 className="text-2xl font-bold mb-6">職務経歴</h2>
-
             <ModalTimeline items={timelineData} />
           </section>
         </article>

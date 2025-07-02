@@ -11,8 +11,6 @@ export default function PublicationsPage() {
       <Title title="Publications" subtitle="論文・書籍など" />
       <main className="container mx-auto">
         <article className="my-8 px-4">
-          <h1 className="text-2xl font-bold mb-6">Publications</h1>
-
           <section className="my-8">
             <h2 className="text-xl font-bold mb-6">📕書籍</h2>
             <ul className="list-disc pl-6 space-y-4">
