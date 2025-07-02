@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import Link from "@/components/Link"
 import { FaExternalLinkAlt } from "react-icons/fa"
+import Title from "../components/Title"
 
 export const metadata = {
   title: "講義等 - Masayoshi Mita",
@@ -43,12 +44,9 @@ export default function LecturesPage() {
 
   return (
     <>
-      <main className="container mx-auto px-4">
-        <article className="my-8">
-          <section className="my-8">
-            <h1 className="text-2xl font-bold mb-6">講義</h1>
-          </section>
-
+      <Title title="Lectures" subtitle="講義" />
+      <main className="container mx-auto">
+        <article className="my-8 px-4">
           <section className="my-8">
             {data.map((item, index) => {
               const isExternal = item.href.startsWith("http")

@@ -38,8 +38,33 @@ export default function Header() {
                 </Link>
               </li>
               <li>
+                <Link href="/about" className="block py-2 md:py-0 hover:text-gray-300 transition-colors">
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link href="/experience" className="block py-2 md:py-0 hover:text-gray-300 transition-colors">
+                  Experience
+                </Link>
+              </li>
+              <li>
+                <Link href="/publications" className="block py-2 md:py-0 hover:text-gray-300 transition-colors">
+                  Publications
+                </Link>
+              </li>
+              <li>
                 <Link href="/lectures" className="block py-2 md:py-0 hover:text-gray-300 transition-colors">
                   Lectures
+                </Link>
+              </li>
+              <li>
+                <Link href="/apps" className="block py-2 md:py-0 hover:text-gray-300 transition-colors">
+                  Apps
+                </Link>
+              </li>
+              <li>
+                <Link href="/articles" className="block py-2 md:py-0 hover:text-gray-300 transition-colors">
+                  Articles
                 </Link>
               </li>
             </ul>
