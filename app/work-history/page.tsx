@@ -35,7 +35,6 @@ export default function WorkHistoryPage() {
 途中からはメンバーを1~2人抱えて対応エリアの拡張や機能追加などをリードしていった。
 2025年頃から徐々に別のメンバーへ引き継いでいった。
 
-
 ## 利用技術
 Python, AWS, Docker, CircleCI, Rollbar
 `,
