@@ -2,7 +2,7 @@ import Link from "@/components/Link"
 import Title from "../components/Title"
 
 export const metadata = {
-  title: "Publications - Masayoshi Mita",
+  title: "論文・書籍など - Masayoshi Mita",
 }
 
 export default function PublicationsPage() {

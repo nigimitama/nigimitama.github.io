@@ -4,7 +4,7 @@ import { Card } from "@/components/ui/card"
 import { SiQiita, SiZenn } from "react-icons/si"
 
 export const metadata = {
-  title: "Articles - Masayoshi Mita",
+  title: "ブログ記事など - Masayoshi Mita",
 }
 
 export default function ArticlesPage() {
@@ -32,21 +32,29 @@ const PersonalBlog = () => {
   const blogs = [
     {
       title: "はてなブログ",
+      description: "技術系の記事（数式が少ないもの）を中心に公開",
       href: "https://nigimitama.hatenablog.jp/",
     },
     {
       icon: <SiQiita />,
       title: "Qiita",
+      description: "開発系の記事",
       href: "https://qiita.com/mitama",
     },
     {
       icon: <SiZenn />,
       title: "Zenn",
+      description: "技術系の記事（特に数式が多いもの）や本など",
       href: "https://zenn.dev/nigimitama",
+    },
+    {
+      title: "データサイエンス関連+αのメモ",
+      description: "自分用に、雑にだが沢山書いているメモ（Jupyter Book）",
+      href: "https://nigimitama.github.io/notes/",
     },
   ]
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
       {blogs.map((e, index) => {
         return (
           <a key={index} href={e.href} target="_blank" rel="noopener noreferrer">
@@ -55,6 +63,7 @@ const PersonalBlog = () => {
                 {e.icon ?? ""}
                 {e.title}
               </div>
+              <div className="text-sm text-gray-500">{e.description}</div>
             </Card>
           </a>
         )

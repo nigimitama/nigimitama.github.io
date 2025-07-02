@@ -2,7 +2,7 @@ import Title from "../components/Title"
 import { AppInfo, AppCard } from "./components/AppCard"
 
 export const metadata = {
-  title: "Apps - Masayoshi Mita",
+  title: "作ったもの - Masayoshi Mita",
 }
 
 export default function AppsPage() {

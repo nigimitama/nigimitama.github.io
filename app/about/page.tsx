@@ -1,7 +1,7 @@
 import Title from "../components/Title"
 
 export const metadata = {
-  title: "About - Masayoshi Mita",
+  title: "プロフィール - Masayoshi Mita",
 }
 
 export default function AboutPage() {

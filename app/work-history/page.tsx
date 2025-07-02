@@ -4,7 +4,7 @@ import { ExternalLinkButton } from "./components/ExternalLinkButton"
 import ModalTimeline, { TimelineItem } from "./components/ModalTimeline"
 
 export const metadata = {
-  title: "Work History - Masayoshi Mita",
+  title: "職務経歴 - Masayoshi Mita",
 }
 
 export default function WorkHistoryPage() {
@@ -107,6 +107,41 @@ SQL, Tableau, Google App Script, TreasureData
 ## 利用技術
 Ruby on Rails, Python
 
+`,
+    },
+    {
+      color: "green",
+      date: "2021 ~ ",
+      title: "研修コンテンツ作成・運用",
+      markdown: `
+## 概要
+部署の特徴としては新卒入社のメンバーが多く、メンバーの専攻分野も様々（心理統計、計量経済学、地理空間データ解析、情報工学、ロボット工学、バイオインフォマティクス、etc.）である。
+
+業務上必要になる専門知識の習得を支援し、メンバーの知識量の底上げを図るため研修コンテンツの作成と運用を行った。
+
+## 内容
+
+研修コンテンツは大分類として
+
+1. 研究力（データサイエンス系の知識）
+2. 開発力（ソフトウェア開発の知識）
+3. 企画力
+4. ソフトスキル
+
+から構成され、根幹となる「研究力」の領域では
+
+- データ分析の一連の流れ（DBからデータ取得、前処理、回帰モデル構築、分類モデル構築）
+- 分野別の基礎知識（画像処理、自然言語処理、地理情報処理、etc.）
+- 基礎知識の深堀り（理系大学～大学院レベルの数学、より深い機械学習の理解、深層学習の理解）
+
+などのコンテンツを作成・運用している。（他の領域は2025年から作成開始）
+
+当初は研究開発部署の1つのチーム内での研修の仕組みだったが、2024年に研究開発部署全体に広がり、2025年から徐々に全社へと広がりつつある。
+
+## プロジェクトにおける役割
+当初はメンバーの1人としてコンテンツ作成や運用を担った。
+
+2024年ごろからは「研究力」の研修をリードする立場となった。
 `,
     },
     {
@@ -221,6 +256,7 @@ Ruby on Rails, Python
       <Title title="Work History" subtitle="職務経歴" />
       <main className="container mx-auto">
         <article className="my-8 px-4">
+          <p className="text-gray-500">入社後に担当してきたプロジェクトについて。</p>
           <section className="my-8">
             <ModalTimeline items={timelineData} />
           </section>
