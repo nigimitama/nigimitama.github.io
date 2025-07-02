@@ -46,7 +46,7 @@ const PersonalBlog = () => {
     },
   ]
   return (
-    <div className="grid grid-cols-3 gap-4">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
       {blogs.map((e, index) => {
         return (
           <a key={index} href={e.href} target="_blank" rel="noopener noreferrer">
