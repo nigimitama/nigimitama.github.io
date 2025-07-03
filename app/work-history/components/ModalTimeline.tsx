@@ -1,6 +1,7 @@
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { DialogTrigger } from "@radix-ui/react-dialog"
 import React from "react"
+import { BiDetail } from "react-icons/bi"
 import Markdown from "react-markdown"
 
 export interface TimelineItem {
@@ -43,9 +44,13 @@ export default function ModalTimeline({ items, className = "" }: TimelineProps) 
             {/* Date */}
             <time className="mb-1 text-sm font-normal leading-none text-gray-400">{item.date}</time>
 
+            {/* Title and Detail Button */}
             <Dialog>
-              <DialogTrigger className="block text-lg font-semibold text-gray-700 mb-2 hover:text-gray-400 	hover:cursor-pointer">
-                {item.title}
+              <h3 className="text-lg font-semibold text-gray-700 mb-2">{item.title}</h3>
+
+              <DialogTrigger className="px-4 py-1 flex items-center gap-1 text-sm rounded-md border border-gray-500 text-gray-500 hover:bg-gray-200 transition-colors hover:cursor-pointer">
+                <BiDetail />
+                詳細
               </DialogTrigger>
 
               <DialogContent className="bg-white max-w-4xl max-h-[80vh] flex flex-col">
