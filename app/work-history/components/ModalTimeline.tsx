@@ -59,9 +59,10 @@ export default function ModalTimeline({ items, className = "" }: TimelineProps) 
             <Dialog>
               <h3 className="text-md font-semibold text-gray-700 mb-2">{item.title}</h3>
 
-              <p className="text-gray-500">
-                <Markdown components={markdownSettings}>{item.summary}</Markdown>
-              </p>
+              <div className="text-gray-500">
+                <Markdown components={markdownSettings}>{item.summary || ""}</Markdown>
+              </div>
+
               <DialogTrigger className="px-4 py-1 flex items-center gap-1 text-sm rounded-md border border-gray-500 text-gray-500 hover:bg-gray-200 transition-colors hover:cursor-pointer">
                 <BiDetail />
                 詳細
