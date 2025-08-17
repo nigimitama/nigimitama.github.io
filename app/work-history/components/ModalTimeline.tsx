@@ -1,5 +1,11 @@
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
-import { DialogTrigger } from "@radix-ui/react-dialog"
+import {
+  Dialog,
+  DialogTrigger,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog"
 import React from "react"
 import { BiDetail } from "react-icons/bi"
 import Markdown, { Components } from "react-markdown"

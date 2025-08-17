@@ -1,6 +1,5 @@
 import Title from "../components/Title"
 
-import ModalTimeline from "./components/ModalTimeline"
 import { OverallHistory } from "./components/OverallHistory"
 
 export const metadata = {
