@@ -75,6 +75,13 @@ const PersonalBlog = () => {
 const TechBlog = () => {
   const articles: ArticleLinkProps[] = [
     {
+      date: "2025-08",
+      href: "https://zenn.dev/gatechnologies/articles/2025-07-31-ordinalcorr",
+      title: "「カテゴリカル変数の相関係数」をご存知ですか？",
+      category: "会社のブログ",
+      tags: ["データサイエンス", "統計学"],
+    },
+    {
       date: "2025-06",
       href: "https://note.com/fine_coot1374/n/n250cbf6e93c8",
       title: "【学会参加レポート】JSAI2025に参加しました！",
