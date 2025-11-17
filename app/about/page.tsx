@@ -87,7 +87,7 @@ const History = () => {
 
           <p className="mb-2">2021年頃からはチーフに昇格し、メンバーの育成やプロジェクトのリードも担うようになる。</p>
 
-          <p className="mb-2"></p>
+          <p className="mb-2">2025年からはマネージャーに昇格。</p>
         </div>
       ),
       link: {

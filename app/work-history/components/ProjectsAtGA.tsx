@@ -69,15 +69,19 @@ export const ProjectsAtGA = () => {
       date: "2023-06 ~",
       title: "マンションのスコアリング",
       description:
-        "マンションの設備や仕様から想起される「グレード感」を定量評価する研究。そのためのマンションの設備仕様に関するデータ整備も実施",
+        "マンションの設備の充実度や仕様から想起される「グレード感」を定量評価する研究。そのためのマンションの設備仕様に関するデータ整備も実施。",
       tags: ["機械学習", "項目反応理論（IRT）"],
       content: (
         <div className="mb-6">
           <h4 className="font-semibold mb-2">関連リンク</h4>
           <div className="flex flex-wrap gap-2">
             <ExternalLinkButton
-              text="機械学習を用いた物件設備スコアの推定: 不動産データを使用したケーススタディ（JSAI2024）"
+              text="機械学習を用いた物件設備スコアの推定（JSAI2024）"
               href="https://doi.org/10.11517/pjsai.JSAI2024.0_2O4OS25a03"
+            />
+            <ExternalLinkButton
+              text="項目反応理論を用いたマンション共用部のスコアリング（日本不動産学会2025）"
+              href="https://www.jares.or.jp/papers/papers40_2025.html"
             />
           </div>
         </div>
