@@ -47,12 +47,11 @@ export default function PublicationsPage() {
             <h2 className="text-xl font-bold mb-6">🎓️論文・学会発表</h2>
             <ul className="list-disc pl-6 space-y-4">
               <li>
-                [査読付き論文]
-                三田匡能, 尾崎幸謙, & 福中公輔. (2025).{" "}
+                [査読付き論文] 三田匡能, 尾崎幸謙, & 福中公輔. (2025).{" "}
                 <Link href="https://www.jares.or.jp/papers/papers40_2025.html">
                   項目反応理論を用いたマンション共用部のスコアリング
-                </Link>.{" "}
-                日本不動産学会学術講演会論文集40号.
+                </Link>
+                . 日本不動産学会学術講演会論文集40号.
               </li>
               <li>
                 Bramson, A., & Mita, M. (2024, July).{" "}
