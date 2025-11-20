@@ -122,7 +122,7 @@ const DesktopApps = () => {
       name: "Dimmer",
       desc: "PC に接続された全てのディスプレイの輝度を一元管理するアプリ。朝になったら自動的に明るく、夜になったら自動的に暗くなるようにスケジューリングしたりできる。",
       repoUrl: "https://github.com/nigimitama/dimmer",
-      imageUrl: "https://github.com/nigimitama/dimmer/raw/master/assets/app-window.png",
+      imageUrl: "https://raw.githubusercontent.com/nigimitama/dimmer/main/assets/app-window.png",
     },
   ]
   return (
