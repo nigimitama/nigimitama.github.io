@@ -1,13 +1,14 @@
 import Link from "@/components/Link"
 import { Badge } from "@/components/ui/badge"
 
-type Category = "会社のブログ" | "個人のブログ" | "Web記事" | "イベント"
+type Category = "会社のブログ" | "個人のブログ" | "Web記事" | "イベント" | "データサイエンティスト協会"
 
 const categoryColors: Record<Category, string> = {
   会社のブログ: "bg-slate-500 text-white",
   個人のブログ: "bg-teal-500 text-white",
   Web記事: "bg-purple-500 text-white",
   イベント: "bg-amber-500 text-white",
+  データサイエンティスト協会: "bg-blue-500 text-white",
 }
 
 const tagColors = new Map<string, string>([

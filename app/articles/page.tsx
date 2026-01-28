@@ -75,6 +75,21 @@ const PersonalBlog = () => {
 const TechBlog = () => {
   const articles: ArticleLinkProps[] = [
     {
+      date: "2025-12",
+      href: "https://www.datascientist.or.jp/useful/useful-5014/",
+      title:
+        "推薦書籍 - 金本拓（2024）『因果推論: 基礎から機械学習・時系列解析・因果探索を用いた意思決定のアプローチ』、オーム社。",
+      category: "データサイエンティスト協会",
+      tags: ["推薦書籍・書評", "統計的因果推論"],
+    },
+    {
+      date: "2025-11",
+      href: "https://zenn.dev/gatechnologies/articles/2025-11-21-jares2025",
+      title: "日本不動産学会2025参加報告",
+      category: "会社のブログ",
+      tags: ["学会", "項目反応理論（IRT）"],
+    },
+    {
       date: "2025-08",
       href: "https://zenn.dev/gatechnologies/articles/2025-07-31-ordinalcorr",
       title: "「カテゴリカル変数の相関係数」をご存知ですか？",
