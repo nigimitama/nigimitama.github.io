@@ -1,5 +1,6 @@
 import Link from "@/components/Link"
 import { Badge } from "@/components/ui/badge"
+import { Card } from "@/components/ui/card"
 
 type Category = "会社のブログ" | "個人のブログ" | "Web記事" | "イベント" | "データサイエンティスト協会"
 
@@ -32,31 +33,33 @@ export interface ArticleLinkProps {
 
 export function ArticleLink({ date, href, title, category, tags }: ArticleLinkProps) {
   return (
-    <div className="mb-4 border-gray-200 border-2 rounded-lg p-3">
-      <div className="flex gap-2 items-center">
-        <p className="text-gray-500">{date}</p>
-        <Link href={href}>
-          <span className="font-bold">{title}</span>
-        </Link>
-      </div>
+    <div className="pb-4">
+      <a href={href} target="_blank" rel="noopener noreferrer">
+        <Card className="hover:shadow-md hover:opacity-60 transition-opacity">
+          <div className="flex gap-2 items-center">
+            <p className="text-gray-500">{date}</p>
+            <span className="font-bold">{title}</span>
+          </div>
 
-      <div className="flex flex-wrap gap-4 mt-2">
-        <Badge className={`text-sm font-medium rounded-sm ${categoryColors[category]}`}>{category}</Badge>
+          <div className="flex flex-wrap gap-4 mt-2">
+            <Badge className={`text-sm font-medium rounded-sm ${categoryColors[category]}`}>{category}</Badge>
 
-        <div className="flex flex-wrap gap-2">
-          {(tags ?? []).map((tag, index) => {
-            return (
-              <Badge
-                key={index}
-                variant="default"
-                className={`text-sm font-semibold ${tagColors.get(tag) ?? "bg-gray-100"}`}
-              >
-                {tag}
-              </Badge>
-            )
-          })}
-        </div>
-      </div>
+            <div className="flex flex-wrap gap-2">
+              {(tags ?? []).map((tag, index) => {
+                return (
+                  <Badge
+                    key={index}
+                    variant="default"
+                    className={`text-sm font-semibold ${tagColors.get(tag) ?? "bg-gray-100"}`}
+                  >
+                    {tag}
+                  </Badge>
+                )
+              })}
+            </div>
+          </div>
+        </Card>
+      </a>
     </div>
   )
 }

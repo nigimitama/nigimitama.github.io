@@ -58,7 +58,7 @@ const PersonalBlog = () => {
       {blogs.map((e, index) => {
         return (
           <a key={index} href={e.href} target="_blank" rel="noopener noreferrer">
-            <Card className="hover:shadow-md hover:text-gray-400">
+            <Card className="hover:shadow-md hover:opacity-60 transition-opacity">
               <div className="flex items-center gap-2">
                 {e.icon ?? ""}
                 {e.title}
