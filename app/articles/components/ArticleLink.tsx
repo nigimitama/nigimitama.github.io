@@ -35,13 +35,13 @@ export function ArticleLink({ date, href, title, category, tags }: ArticleLinkPr
   return (
     <div className="pb-4">
       <a href={href} target="_blank" rel="noopener noreferrer">
-        <Card className="hover:shadow-md hover:opacity-60 transition-opacity">
+        <Card className="gap-4 hover:shadow-md hover:opacity-60 transition-opacity">
           <div className="flex gap-2 items-center">
             <p className="text-gray-500">{date}</p>
             <span className="font-bold">{title}</span>
           </div>
 
-          <div className="flex flex-wrap gap-4 mt-2">
+          <div className="flex flex-wrap gap-4">
             <Badge className={`text-sm font-medium rounded-sm ${categoryColors[category]}`}>{category}</Badge>
 
             <div className="flex flex-wrap gap-2">
