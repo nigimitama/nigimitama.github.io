@@ -76,7 +76,7 @@ const ChromeExtensions = () => {
       desc: "note.com にて記事の目次を右端に固定表示する拡張機能",
       repoUrl: "https://github.com/nigimitama/note-toc",
       siteUrl: "https://chromewebstore.google.com/detail/dddpojfjpcidbebhjijlchdkfmegoidg?utm_source=item-share-cb",
-      imageUrl: "https://github.com/nigimitama/note-toc/raw/main/images/image-20220130222521595.png",
+      imageUrl: "https://github.com/nigimitama/note-toc/blob/main/images/1280x800.jpg?raw=true",
     },
     {
       name: "Book Searcher",
