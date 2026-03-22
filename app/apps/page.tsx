@@ -106,17 +106,11 @@ const ChromeExtensions = () => {
 const DesktopApps = () => {
   const apps: AppInfo[] = [
     {
-      name: "image-editor-for-ebook",
-      desc: "電子書籍の自作のため、スキャンした画像へのシンプルな画像処理を行う GUI アプリ",
-      repoUrl: "https://github.com/nigimitama/image-editor-for-ebook",
+      name: "pdf-ebook-maker",
+      desc: "電子書籍の自作を補助するGUI アプリ。OCRをかけ、目次を自動生成してPDFに埋め込む機能などがある。",
+      repoUrl: "https://github.com/nigimitama/pdf-ebook-maker",
       imageUrl:
-        "https://github.com/nigimitama/image-editor-for-ebook/blob/master/README.assets/image-20230107154633566.png?raw=true",
-    },
-    {
-      name: "Searchable PDF Maker",
-      desc: "画像にOCRをかけて検索可能なPDFを作成するデスクトップアプリ",
-      repoUrl: "https://github.com/nigimitama/searchable-pdf-maker",
-      imageUrl: "https://github.com/nigimitama/searchable-pdf-maker/raw/main/images/app.png",
+        "https://raw.githubusercontent.com/nigimitama/pdf-ebook-maker/main/images/toc-creation.png",
     },
     {
       name: "Dimmer",
