@@ -75,6 +75,20 @@ const PersonalBlog = () => {
 const TechBlog = () => {
   const articles: ArticleLinkProps[] = [
     {
+      date: "2026-04",
+      href: "https://zenn.dev/gatechnologies/articles/2026-04-23-lambda-snapstart",
+      title: "AWS Lambda SnapStartはどのくらいのInit Durationの関数から採用すべきか",
+      category: "会社のブログ",
+      tags: ["AWS", "Lambda", "Python"],
+    },
+    {
+      date: "2026-04",
+      href: "https://zenn.dev/gatechnologies/articles/2026-04-16-s3-files-lambda-coldstart",
+      title: "S3 Filesを使えばLambdaがコールドスタートしてもファイルを高速に読み込めると勘違いしていた話",
+      category: "会社のブログ",
+      tags: ["AWS", "Lambda", "S3 Files"],
+    },
+    {
       date: "2025-12",
       href: "https://www.datascientist.or.jp/useful/useful-5014/",
       title:
