@@ -19,6 +19,11 @@ export const OverallHistory = () => {
             <p className="mb-2">2021年頃からはチーフに昇格し、メンバーの育成やプロジェクトのリードも担うようになる。</p>
 
             <p className="mb-2">2025年からはマネージャーに昇格。</p>
+
+            <p className="mb-2">
+              2026年からはForward Deployed
+              Engineerのマネージャーとなり、ビジネス部門における課題発見、AI導入やプロトタイプ開発による課題解決、効果が大きかったプロトタイプのプロダクトへの反映などを推進。
+            </p>
           </section>
 
           <section className="mb-2 bg-gray-100 p-4 mt-4 rounded">
